@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+	<!--FALTAM OS TEXTOS!!! !-->
+<html lang="pt-br">
+<head>
+	<title>Feliz dia das Mães!</title>
+	<meta charset="UTF-8">
+	<link rel="icon" href="icone.png" type="image/x-icon" >
+    
+	<!----------------------------------------- PARTE DE CSS !---------------------------->
+    
+	<style type="text/css">
+	body{
+		margin: 0px; padding: 0px;
+
+}
+
+table{
+	border:solid;
+	border-color:#820658;
+	width=100px;
+}
+	.heu input{
+		border: none;
+		background-color: #ffffff;
+	}
+#corpo{
+		border-radius: 30px;
+		background-color: #FFD4ED;
+		height: 1000px;
+		width: 1000px;
+		text-align: center;
+		align-self:center;
+}
+#textos{
+	font-family:Script MT Bold;
+	font-size: 20px;
+	color: #848484;
+	letter-spacing:1px;
+	text-align:justify;
+	margin-left: 50px;
+	margin-right: 50px;
+	border:none;
+	
+}
+	#title{
+		height: 100px;
+		background-color:#820658; 
+		margin: 0px 0px;
+		
+	}
+	input[type=button]{
+		background-color: #820658;
+		border-color:#820658;
+		color:white;
+		padding: 5px;
+		font-family:Berlin Sans FB;
+		letter-spacing:1px;
+	}
+	input[type=reset]{
+		background-color: #820658;
+		border-color:#820658;
+		color:white;
+		padding: 5px;
+		font-family:Berlin Sans FB;
+		letter-spacing:1px;
+	}
+	#imc{
+		padding:5px;
+		background-color:#820658 ;
+		color:white;
+		border-radius: 10px;
+		width: 260px;
+		font-family:Berlin Sans FB;
+		font-size: 40px;
+		 margin-left: 363px;
+		 font-style:inherit;
+
+	}
+	body{margin: 0px; padding: 0px;
+
+	}
+	#corpo{
+		border-radius: 30px;
+		background-color: #FFD4ED;
+		height: 1000px;
+		width: 1000px;
+		text-align: center;
+	
+	}
+	#title{
+		height: 100px;
+		background-color:#820658; 
+		margin: 0px 0px;
+	}
+
+	#menu{
+		border-radius: 12px;
+		margin:auto;
+		align-content: center;
+		background-color: #FFD4ED;
+	}
+	.menu{
+		list-style: none;
+		border: 0px trasparent White;
+		float: left;
+		margin-top:10px;
+		position: center;
+		margin-left: 330px;
+		font-size:20px;
+		font-family:Berlin Sans FB;
+		
+	}
+	.menu li{
+		position: relative;
+		float: left;
+		border-right: 1px solid white;
+		background-color: #FFD4ED;
+		width: inherit;
+	}
+	.menu li a {color: #333;
+		 text-decoration: none; 
+		 padding: 5px 10px; 
+		 display: block;
+		 color:#F577D5;
+	}
+	.menu li a:hover{
+		background: #820658;
+		color: #FFFFFF;
+		border-radius: 4px;
+	}
+	.menu li ul{
+		position: absolute;
+		top: 25px;
+		left: 0;
+		background-color: white;
+		display: none;
+		}
+	
+	#menu ul li a:hover{
+		background:#820658; 
+		border-bottom:3px solid hotpink;
+		color:#ffffff;
+	}
+	fonte{
+		font-size: 20px;
+		font-family:Berlin Sans FB;
+		color:#252525;
+	
+	}
+	d{
+		font-family:Berlin Sans FB;font-size:15px;
+		color:#A7A7A7;
+	}
+	
+
+	</style>
+
+<!-------------------------------------------------- PARTE DE JAVA SCRIPT!-------------------------------->
+
+		<script type="text/javascript">
+			function calcula_imc(){
+			var altura = document.imcForm.altura.value;
+			var peso = document.imcForm.peso.value;
+			var quadrado = (altura * altura);	
+			var calculo = (peso/quadrado);
+			var sexo = document.imcForm.sexo.value;
+			
+			if (sexo =="op1"){
+			if(calculo<18.5){
+				document.imcForm.result.value = (" "+calculo.toFixed(2));
+				document.imcForm.clas.value = ("Abaixo do peso");
+			}else if(calculo>=18.5 && calculo<24.9){
+				document.imcForm.result.value = (" "+calculo.toFixed(2));
+				document.imcForm.clas.value = ("Peso ideal");
+			}else if(calculo>=25 && calculo<29.9) {
+				document.imcForm.result.value = (" "+calculo.toFixed(2));
+				document.imcForm.clas.value = ("Sobrepeso");
+			}else if(calculo>=30 && calculo<39.9) {
+				document.imcForm.result.value = (" "+calculo.toFixed(2));
+				document.imcForm.clas.value = ("Obesidade");
+			}else if (calculo>40){
+				document.imcForm.result.value = (" "+calculo.toFixed(2));
+				document.imcForm.clas.value = ("Obesidade grave");
+			}
+			}
+			}
+</script>
+</head>
+<body background="fundo.jpg" topmargin="0">
+	<center>
+    	<div id="corpo" class="corpo">
+			<div id="title">
+				<img src="tit.png">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			</div>
+             <div id="menu">
+    <nav>
+    		<ul class="menu">
+         
+			<li><a href="diadasmaes.html">Home</a></li>
+             <li><a href="imc.html" >Calcule seu IMC</a></li>
+            <li><a href="saude.html"> Saúde</a></li>
+
+	</ul>
+    </nav>
+    </div>
+    
+				<br><br><br><br>
+                <p style="margin-right:500px;color:#514C4C;font-size:25px;font-family:Berlin Sans FB">Qual a importância de saber seu IMC?</p>
+               <div id="textos">&nbsp;&nbsp;&nbsp;	O Índice de Massa Corporal é o padrão internacional, adotado pela Organização Mundial de Saúde (OMS), que é utilizado para medir a obesidade e o seu grau – o que influencia diretamente em questões de saúde. Osobrepeso e a obesidade, que podem ser revelados ao aplicar o índice, são a porta de entrada para diversas doenças consideradas de alto risco.</div>
+                <br><br>
+			<div id="imc"> IMC</div>	
+            					
+<!------------------------------------------PARTE DE MOSTRAR CÁLCULO DO IMC !---------------------------------------->
+
+
+				<table align="center" size="7"  cellpadding="7" cellspacing="20">
+					<form name="imcForm" id="imcForm" action="#" autocomplete="off">
+				<tr>
+						<td colspan="2" align="center"style="font-size:	 20px;font-family:Berlin Sans FB;color:#252525;" align="left">Altura:&nbsp;&nbsp;<input type="text" size="6" id="altura" name="altura" align="left" style=";border-radius: 10px;font-family: Berlin Sans FB;font-size:20px;color:#252525;border:none;text-align:center;">&nbsp;<d>m</d></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center" style="font-size: 20px;font-family:Berlin Sans FB;color:#252525;" >&nbsp;&nbsp;Peso:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  size="6" id="peso"  name="peso" style=";border-radius: 10px;font-family: Berlin Sans FB;font-size: 20px;color:#252525;border-top:none;border-left:none;border-right:none;text-align:center;">&nbsp;<d>Kg</d></td>
+                    </tr>
+				<tr>
+					<td colspan="2"><label><input type="radio" name="sexo" value="op1" id="sexo_0" ><fonte>Masculino</fonte></label>&nbsp;&nbsp;&nbsp;<label><input type="radio" name="sexo" value="o2" id="sexo_1"><fonte>Feminino</fonte></label></td>
+				</tr>
+				<tr>
+				<td colspan="2"><a href="#res"><input name="Enviar" type="button" value="Calcular"  onclick="calcula_imc()"></a>&nbsp
+					<input type="reset" value="Limpar" style="border-radius=0px;color=blue;background-color:;"></td>
+						
+				</tr>
+				</table><br><br>
+					<fonte style="margin-right:0px; font-size:20px;"><a name="res">Seu índice é:</a></fonte><input type="text" id="result" name="result" disabled="disabled" class="heu" style="background-color:#FFD4ED;border: none;font-family:Berlin Sans FB;font-size:36px;color:purple;margin-right:320px;" size="6"><br>
+                    <input type="text" id="clas" name="clas" disabled="disabled" class="clas" style="background-color:#FFD4ED;border: none;margin-right:240px;font-family:Berlin Sans FB;font-size:25px;color:#B309D2;text-align:center;" size="15" >
+                    
+				</form><br><br>
+            <p style="margin-right:650px;color:#514C4C;font-size:25px;font-family:Berlin Sans FB">Gostou do resultado?</p>
+			<div id="textos">
+		&nbsp;&nbsp;&nbsp;Confira nossa página onde possui algumas dicas para manter uma vida saudávelS... Clique <a href="saude.html" style="color:#848484;">aqui</a> e aproveite!			
+			</div>
+        </center>
+        <center><p style="font-family:Century Gothic;font-size:12px;color:#ffffff";padding:0px;>2017 @ Dia das Mães por Renan Roseno e Estefane Pereira</center>
+</center>
+</body>
+</html>
